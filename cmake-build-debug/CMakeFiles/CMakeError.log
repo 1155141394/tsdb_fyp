@@ -1,0 +1,33 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Library/Developer/CommandLineTools/usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+ld: library not found for -lSystem
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Performing C SOURCE FILE Test CC_SUPPORTS_NO_FORMAT_TRUNCATION failed with the following output:
+Change Dir: /Users/taozhisheng/Desktop/CUHK/tsdb_fyp/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/Applications/CLion.app/Contents/bin/ninja/mac/ninja cmTC_7c405 && [1/2] Building C object CMakeFiles/cmTC_7c405.dir/src.c.o
+warning: unknown warning option '-Wno-format-truncation' [-Wunknown-warning-option]
+1 warning generated.
+[2/2] Linking C executable cmTC_7c405
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test CC_STRINGOP_TRUNCATION failed with the following output:
+Change Dir: /Users/taozhisheng/Desktop/CUHK/tsdb_fyp/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/Applications/CLion.app/Contents/bin/ninja/mac/ninja cmTC_ae65c && [1/2] Building C object CMakeFiles/cmTC_ae65c.dir/src.c.o
+warning: unknown warning option '-Wstringop-truncation'; did you mean '-Wstring-concatenation'? [-Wunknown-warning-option]
+1 warning generated.
+[2/2] Linking C executable cmTC_ae65c
+
+
+Source file was:
+int main(void) { return 0; }

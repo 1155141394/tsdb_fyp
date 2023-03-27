@@ -1,0 +1,32 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/taozhisheng/Desktop/CUHK/tsdb_fyp -B /Users/taozhisheng/Desktop/CUHK/tsdb_fyp/cmake-build-debug
+-- The C compiler identification is AppleClang 14.0.0.14000029
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- TimescaleDB version 2.11.0-dev. Can be updated from version 2.10.1
+-- Build type is Debug
+-- Install method is 'source'
+-- Performing Test CC_SUPPORTS_NO_UNUSED_CLI_ARG
+-- Performing Test CC_SUPPORTS_NO_UNUSED_CLI_ARG - Success
+-- Performing Test CC_SUPPORTS_NO_FORMAT_TRUNCATION
+-- Performing Test CC_SUPPORTS_NO_FORMAT_TRUNCATION - Failed
+-- Compiler does not support -Wno-format-truncation
+-- Performing Test CC_STRINGOP_TRUNCATION
+-- Performing Test CC_STRINGOP_TRUNCATION - Failed
+-- Compiler does not support -Wno-stringop-truncation
+-- Performing Test CC_SUPPORTS_IMPLICIT_FALLTHROUGH
+-- Performing Test CC_SUPPORTS_IMPLICIT_FALLTHROUGH - Success
+-- Performing Test CC_SUPPORTS_NEWLINE_EOF
+-- Performing Test CC_SUPPORTS_NEWLINE_EOF - Success
+-- Performing Test CC_SUPPORTS_VISIBILITY_HIDDEN
+-- Performing Test CC_SUPPORTS_VISIBILITY_HIDDEN - Success
+-- Using compiler AppleClang
+CMake Error at CMakeLists.txt:320 (message):
+  Unable to find 'pg_config'
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/taozhisheng/Desktop/CUHK/tsdb_fyp/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/Users/taozhisheng/Desktop/CUHK/tsdb_fyp/cmake-build-debug/CMakeFiles/CMakeError.log".

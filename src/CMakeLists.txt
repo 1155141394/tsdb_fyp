@@ -62,8 +62,6 @@ include_directories("/usr/include/python3.10")
 # 添加动态库
 LINK_DIRECTORIES("/usr/lib/python3.10/config-3.10-x86_64-linux-gnu")
 
-#find_package(Python3 REQUIRED COMPONENTS Interpreter Development)
-#target_link_libraries(${PROJECT_NAME} Python3::Python)
 
 
 set(GITREV_TMP ${CMAKE_CURRENT_BINARY_DIR}/tmp_gitcommit.h)
@@ -129,3 +127,5 @@ add_subdirectory(ts_catalog)
 add_subdirectory(import)
 add_subdirectory(nodes)
 add_subdirectory(planner)
+
+target_link_libraries(${PROJECT_NAME} Python3::Python)

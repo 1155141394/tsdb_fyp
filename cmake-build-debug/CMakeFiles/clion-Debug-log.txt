@@ -1,5 +1,4 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /Users/xutao/CLionProjects/tsdb_fyp -B /Users/xutao/CLionProjects/tsdb_fyp/cmake-build-debug
--- Found Python3: /Users/xutao/opt/anaconda3/bin/python3.9 (found version "3.9.13") found components: Interpreter Development Development.Module Development.Embed 
 CMake Warning (dev) at /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPython/Support.cmake:3242 (add_library):
   ADD_LIBRARY called with SHARED option but the target platform does not
   support dynamic linking.  Building a STATIC library instead.  This may lead
@@ -10,9 +9,19 @@ Call Stack (most recent call first):
   CMakeLists.txt:15 (find_package)
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
-CMake Error at CMakeLists.txt:16 (target_link_libraries):
-  Cannot specify link libraries for target "my_program" which is not built by
-  this project.
+-- TimescaleDB version 2.11.0-dev. Can be updated from version 2.10.1
+-- Build type is Debug
+-- Install method is 'source'
+-- Compiler does not support -Wno-format-truncation
+-- Compiler does not support -Wno-stringop-truncation
+-- Using compiler AppleClang
+-- Compiling against PostgreSQL version 12.9
+-- Isolation regress checks disabled: 'pg_isolation_regress' not found
+Assertion checks are OFF in Debug build. Set -DASSERTIONS=ON to enable assertions.
+-- Could NOT find OpenSSL, try to set the path to OpenSSL root folder in the system variable OPENSSL_ROOT_DIR (missing: OPENSSL_CRYPTO_LIBRARY OPENSSL_INCLUDE_DIR) 
+CMake Error at CMakeLists.txt:559 (message):
+  TimescaleDB requires OpenSSL but it wasn't found.  If you want to continue
+  without OpenSSL, re-run bootstrap with `-DUSE_OPENSSL=0`
 
 
 -- Configuring incomplete, errors occurred!

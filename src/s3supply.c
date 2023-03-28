@@ -1,4 +1,5 @@
 #include <Python.h>
+#include <stdio.h>
 #include "s3supply.h"
 void
 _s3_supply_init(void)
@@ -35,7 +36,7 @@ _s3_supply_init(void)
     }
     PyObject *pArgs = PyTuple_New(0);
     PyObject *pResult = PyObject_CallObject(pfunc, pArgs);
-
+    printf("HHHHHHHHHHHHHHHHHHHHHHHHHHHHH\n");
     Py_XDECREF(pmodule);
     Py_XDECREF(pfunc);
     Py_XDECREF(pArgs);

@@ -128,4 +128,4 @@ add_subdirectory(import)
 add_subdirectory(nodes)
 add_subdirectory(planner)
 
-target_link_libraries(${PROJECT_NAME} Python3::Python)
+target_link_libraries(${PROJECT_NAME} -lpython3.10)

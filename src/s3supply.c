@@ -1,4 +1,4 @@
-#include <python.h>
+#include <Python.h>
 #include "s3supply.h"
 void
 _s3_supply_init(void)

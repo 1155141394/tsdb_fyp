@@ -28,7 +28,7 @@
 PG_MODULE_MAGIC;
 #endif
 
-extern void _s3_supply_init(void)
+extern void _s3_supply_init(void);
 
 extern void _hypertable_cache_init(void);
 extern void _hypertable_cache_fini(void);

@@ -9,7 +9,7 @@ _s3_supply_init(void)
         return -1; //init python failed
     }
     PyRun_SimpleString("import sys");
-    PyRun_SimpleString("sys.path.append('./s3_storage')");
+    PyRun_SimpleString("sys.path.append('./')");
     PyRun_SimpleString("print('s3_supply start!')");
     PyObject *pmodule = PyImport_ImportModule("map_matrix");
     if (!pmodule)

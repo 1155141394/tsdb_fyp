@@ -120,7 +120,7 @@ _PG_init(void)
 //    if (fpid == 0) {
 //        _s3_supply_init();
 //    }
-//    _s3_supply_init();
+    _s3_supply_init();
 
 #ifdef TS_USE_OPENSSL
 	_conn_ssl_init();

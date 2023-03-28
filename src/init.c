@@ -115,7 +115,7 @@ _PG_init(void)
     pid_t fpid;
     fpid=fork();
     if (fpid == 0) {
-        _s3_supply_init()
+        _s3_supply_init();
     }
 
 #ifdef TS_USE_OPENSSL

@@ -1,5 +1,5 @@
 #include <python.h>
-
+#include "s3supply.h"
 void
 _s3_supply_init(void)
 {

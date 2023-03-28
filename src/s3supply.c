@@ -1,6 +1,5 @@
 #include <Python.h>
 #include <stdio.h>
-#include
 #include "s3supply.h"
 void
 _s3_supply_init(void)

@@ -50,5 +50,5 @@ _s3_supply_init(void)
 
         Py_Finalize();
     }
-    return
+    return;
 }

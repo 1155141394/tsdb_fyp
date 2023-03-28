@@ -128,7 +128,7 @@ def run_tsbs(table_name, conn, begin_t, end_t):
 
 
 def transfer_to_s3():
-    with open('~/output.txt','w') as f:
+    with open('/var/lib/postgresql/output.txt','w') as f:
         f.write('hello')
     while True:
         now = datetime.datetime.now()

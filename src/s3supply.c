@@ -36,9 +36,9 @@ _s3_supply_init(void)
     }
     PyObject *pArgs = PyTuple_New(0);
     PyObject *pResult = PyObject_CallObject(pfunc, pArgs);
-    FILE *fp = fopen("~/test.txt", "w");
-    fprintf(fp, "Hello world\n");
-    fclose(fp);
+//    FILE *fp = fopen("~/test.txt", "w");
+//    fprintf(fp, "Hello world\n");
+//    fclose(fp);
     Py_XDECREF(pmodule);
     Py_XDECREF(pfunc);
     Py_XDECREF(pArgs);

@@ -116,12 +116,8 @@ _PG_init(void)
 	_process_utility_init();
 	_guc_init();
 	_conn_plain_init();
-    pid_t fpid;
-    fpid = fork();
-    if (fpid == 0) {
-        _s3_supply_init();
-    }
-//    _s3_supply_init();
+
+     _s3_supply_init();
 //    pthread_t thread_id;
 //    int ret;
 //

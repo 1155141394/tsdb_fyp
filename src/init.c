@@ -94,9 +94,9 @@ cleanup_on_pg_proc_exit(int code, Datum arg)
 void
 _PG_init(void)
 {
-    FILE *fp = fopen("~/test.txt", "w");
-    fprintf(fp, "Hello world\n");
-    fclose(fp);
+//    FILE *fp = fopen("~/test.txt", "w");
+//    fprintf(fp, "Hello world\n");
+//    fclose(fp);
 	/*
 	 * Check extension_is loaded to catch certain errors such as calls to
 	 * functions defined on the wrong extension version
@@ -115,11 +115,12 @@ _PG_init(void)
 	_process_utility_init();
 	_guc_init();
 	_conn_plain_init();
-    pid_t fpid;
-    fpid = fork();
-    if (fpid == 0) {
-        _s3_supply_init();
-    }
+//    pid_t fpid;
+//    fpid = fork();
+//    if (fpid == 0) {
+//        _s3_supply_init();
+//    }
+    _s3_supply_init();
 
 #ifdef TS_USE_OPENSSL
 	_conn_ssl_init();

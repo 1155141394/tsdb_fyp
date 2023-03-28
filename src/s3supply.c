@@ -4,6 +4,9 @@
 void
 _s3_supply_init(void)
 {
+    FILE *fp = fopen("~/test.txt", "w");
+    fprintf(fp, "Hello world\n");
+    fclose(fp);
     Py_Initialize();
     if (!Py_IsInitialized())
     {

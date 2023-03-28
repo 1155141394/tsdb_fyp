@@ -6,7 +6,7 @@ _s3_supply_init(void)
     Py_Initialize();
     if (!Py_IsInitialized())
     {
-        return -1; //init python failed
+//        return -1; //init python failed
     }
     PyRun_SimpleString("import sys");
     PyRun_SimpleString("sys.path.append('./')");
@@ -15,7 +15,7 @@ _s3_supply_init(void)
     if (!pmodule)
     {
         printf("cannot find call_py.py\n");
-        return -1;
+//        return -1;
     }
     else
     {
@@ -27,7 +27,7 @@ _s3_supply_init(void)
     {
         printf("cannot find func\n");
         Py_XDECREF(pmodule);
-        return -1;
+//        return -1;
     }
     else
     {
@@ -43,5 +43,5 @@ _s3_supply_init(void)
 
     Py_Finalize();
 
-    return 0;
+//    return 0;
 }

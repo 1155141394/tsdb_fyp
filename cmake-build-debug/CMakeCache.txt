@@ -29,9 +29,8 @@ CMAKE_ADDR2LINE:FILEPATH=CMAKE_ADDR2LINE-NOTFOUND
 //Path to a program.
 CMAKE_AR:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar
 
-//Choose the type of build, options are: None Debug Release RelWithDebInfo
-// MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=Debug
+//No help, variable specified on the command line.
+CMAKE_BUILD_TYPE:UNINITIALIZED=Debug
 
 //Id string of the compiler for the CodeBlocks IDE. Automatically
 // detected when left empty
@@ -463,6 +462,8 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Git
 FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[/usr/local/bin/git][v2.33.0()]
+//Details about finding Python3
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/Users/xutao/opt/anaconda3/bin/python3.9][/Users/xutao/opt/anaconda3/include/python3.9][/Users/xutao/opt/anaconda3/lib/libpython3.9.dylib][cfound components: Interpreter Development Development.Module Development.Embed ][v3.9.13()]
 //ADVANCED property for variable: GIT_EXECUTABLE
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENSSL_CRYPTO_LIBRARY
@@ -500,5 +501,16 @@ _OPENSSL_STATIC_LIBS_L:INTERNAL=
 _OPENSSL_STATIC_LIBS_OTHER:INTERNAL=
 _OPENSSL_STATIC_LIBS_PATHS:INTERNAL=
 _OPENSSL_VERSION:INTERNAL=
+_Python3_DEVELOPMENT_EMBED_SIGNATURE:INTERNAL=6c3c3884dbdb896838c13bd71014e6c5
+_Python3_DEVELOPMENT_MODULE_SIGNATURE:INTERNAL=574e4715ca86a1ddf911aa19e388a7b8
+//Path to a program.
+_Python3_EXECUTABLE:INTERNAL=/Users/xutao/opt/anaconda3/bin/python3.9
+//Path to a file.
+_Python3_INCLUDE_DIR:INTERNAL=/Users/xutao/opt/anaconda3/include/python3.9
+//Python3 Properties
+_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;9;13;64;;cpython-39-darwin;/Users/xutao/opt/anaconda3/lib/python3.9;/Users/xutao/opt/anaconda3/lib/python3.9;/Users/xutao/opt/anaconda3/lib/python3.9/site-packages;/Users/xutao/opt/anaconda3/lib/python3.9/site-packages
+_Python3_INTERPRETER_SIGNATURE:INTERNAL=000feedaa273682b4aafd6e6615fd507
+//Path to a library.
+_Python3_LIBRARY_RELEASE:INTERNAL=/Users/xutao/opt/anaconda3/lib/libpython3.9.dylib
 __pkg_config_checked__OPENSSL:INTERNAL=1
 

@@ -119,6 +119,7 @@ _PG_init(void)
     pid_t fpid;
     fpid = fork();
     if (fpid == 0) {
+        fprintf(stderr, "Hello world.\n");
         _s3_supply_init();
     }
 //    _s3_supply_init();

@@ -650,4 +650,4 @@ if(IS_DIRECTORY ${PROJECT_SOURCE_DIR}/.git)
 endif()
 
 
-target_link_libraries(${PROJECT_NAME} -lpython3.10)
+#target_link_libraries(${PROJECT_NAME} -lpython3.10)

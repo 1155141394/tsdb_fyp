@@ -13,7 +13,7 @@ include_directories("/usr/include/python3.10")
 LINK_DIRECTORIES("/usr/lib/python3.10/config-3.10-x86_64-linux-gnu")
 
 find_package(Python3 REQUIRED COMPONENTS Interpreter Development)
-target_link_libraries(my_program Python3::Python)
+target_link_libraries(${PROJECT_NAME} Python3::Python)
 
 option(APACHE_ONLY "only compile apache code" off)
 # This requires all tests to run. This defaults to OFF but can be enabled to

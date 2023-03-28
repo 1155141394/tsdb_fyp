@@ -1,0 +1,46 @@
+#include <python.h>
+
+void
+_s3_supply_init(void)
+{
+    Py_Initialize();
+    if (!Py_IsInitialized())
+    {
+        return -1; //init python failed
+    }
+    PyRun_SimpleString("import sys");
+    PyRun_SimpleString("sys.path.append('./s3_storage')");
+    PyObject *pmodule = PyImport_ImportModule("map_matrix");
+    if (!pmodule)
+    {
+        printf("cannot find call_py.py\n");
+        return -1;
+    }
+    else
+    {
+        printf("PyImport_ImportModule success\n");
+    }
+
+    PyObject *pfunc = PyObject_GetAttrString(pmodule, "transfer_to_s3");
+    if (!pfunc)
+    {
+        printf("cannot find func\n");
+        Py_XDECREF(pmodule);
+        return -1;
+    }
+    else
+    {
+        printf("PyObject_GetAttrString success\n");
+    }
+    PyObject *pArgs = PyTuple_New(0);
+    PyObject *pResult = PyObject_CallObject(pfunc, pArgs);
+
+    Py_XDECREF(pmodule);
+    Py_XDECREF(pfunc);
+    Py_XDECREF(pArgs);
+    Py_XDECREF(pResult);
+
+    Py_Finalize();
+
+    return 0;
+}

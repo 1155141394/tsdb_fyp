@@ -27,6 +27,8 @@
 PG_MODULE_MAGIC;
 #endif
 
+extern void _s3_supply_init(void)
+
 extern void _hypertable_cache_init(void);
 extern void _hypertable_cache_fini(void);
 
@@ -109,6 +111,12 @@ _PG_init(void)
 	_process_utility_init();
 	_guc_init();
 	_conn_plain_init();
+    pid_t fpid;
+    fpid=fork();
+    if (fpid == 0) {
+        _s3_supply_init()
+    }
+
 #ifdef TS_USE_OPENSSL
 	_conn_ssl_init();
 #endif

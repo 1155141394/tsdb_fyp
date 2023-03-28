@@ -7,7 +7,10 @@ include(CheckSymbolExists)
 include(GitCommands)
 include(GenerateScripts)
 include(CMakeDependentOption)
-
+# include Python.h 环境
+include_directories("/usr/include/python3.10")
+# 添加动态库
+LINK_DIRECTORIES("/usr/lib/python3.10/config-3.10-x86_64-linux-gnu")
 option(APACHE_ONLY "only compile apache code" off)
 # This requires all tests to run. This defaults to OFF but can be enabled to
 # ensure that no tests are skipped because of missing tools.

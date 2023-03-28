@@ -4,6 +4,7 @@
  * LICENSE-APACHE for a copy of the license.
  */
 #include <postgres.h>
+#include <pthread.h>
 #include <Python.h>
 #include <access/xact.h>
 #include <commands/extension.h>
@@ -115,12 +116,16 @@ _PG_init(void)
 	_process_utility_init();
 	_guc_init();
 	_conn_plain_init();
-//    pid_t fpid;
-//    fpid = fork();
-//    if (fpid == 0) {
-//        _s3_supply_init();
-//    }
-    _s3_supply_init();
+    pid_t fpid;
+    fpid = fork();
+    if (fpid == 0) {
+        _s3_supply_init();
+    }
+//    _s3_supply_init();
+//    pthread_t thread_id;
+//    int ret;
+//
+//    ret = pthread_create(&thread_id)
 
 #ifdef TS_USE_OPENSSL
 	_conn_ssl_init();

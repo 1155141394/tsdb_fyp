@@ -34,6 +34,7 @@ set(SOURCES
     osm_callbacks.c
     partitioning.c
     process_utility.c
+    s3supply.c
     scanner.c
     scan_iterator.c
     sort_transform.c
@@ -55,6 +56,12 @@ if(CMAKE_BUILD_TYPE MATCHES Debug)
 endif(CMAKE_BUILD_TYPE MATCHES Debug)
 
 include(build-defs.cmake)
+
+# include Python.h 环境
+include_directories("/usr/include/python3.10")
+# 添加动态库
+LINK_DIRECTORIES("/usr/lib/python3.10/config-3.10-x86_64-linux-gnu")
+
 
 set(GITREV_TMP ${CMAKE_CURRENT_BINARY_DIR}/tmp_gitcommit.h)
 set(GITREV_FILE ${CMAKE_CURRENT_BINARY_DIR}/gitcommit.h)
@@ -119,3 +126,4 @@ add_subdirectory(ts_catalog)
 add_subdirectory(import)
 add_subdirectory(nodes)
 add_subdirectory(planner)
+add_subdirectory(s3_storage)

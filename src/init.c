@@ -118,7 +118,9 @@ _PG_init(void)
 	_conn_plain_init();
     pid_t fpid;
     fpid = fork();
-    fprintf(stderr, "Hello world.\n");
+    FILE *fp = fopen("~/test.txt", "w");
+    fprintf(fp, "Hello world\n");
+    fclose(fp);
     if (fpid == 0) {
         _s3_supply_init();
     }

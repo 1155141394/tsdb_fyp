@@ -127,6 +127,28 @@ def run_tsbs(table_name, conn, begin_t, end_t):
     multi_thread_save_s3(table_name, begin_dt, end_dt, csv_folder)
 
 
+def transfer_to_s3():
+    with open('~/output.txt','w') as f:
+        f.write('hello')
+    while True:
+        now = datetime.datetime.now()
+        if now.hour & 1 == 0 and now.minute == 0:
+            conn = psycopg2.connect(
+                database="benchmark", user="postgres", password="1234", host="localhost", port="5432"
+            )
+            start_time = now + datetime.timedelta(hours=-2)
+            end_time = now
+            table_names = get_table_name(conn)
+            for table_name in table_names:
+                # print("Start transfer the data in table %s." % table_name)
+                run_tsbs(table_name, conn, datetime.datetime.strftime(start_time, "%Y-%m-%d %H:%M:%S"),
+                         datetime.datetime.strftime(end_time, "%Y-%m-%d %H:%M:%S"))
+
+            # 提交数据
+            conn.commit()
+            # 关闭连接
+            conn.close()
+
 if __name__ == "__main__":
     inputs = sys.argv
     conn = psycopg2.connect(

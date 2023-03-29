@@ -54,15 +54,15 @@ void
 query_to_string(Query *query)
 {
     // init attr_name
-    StringInfoData attr_name;
+    struct StringInfoData attr_name;
     initStringInfo(&attr_name);
 
     // init table_name
-    StringInfoData table_name;
+    struct StringInfoData table_name;
     initStringInfo(&table_name);
 
     // init where condition
-    StringInfoData where_part;
+    struct StringInfoData where_part;
     initStringInfo(&where_part);
 
 //    appendStringInfoString(&buf, "SELECT ");

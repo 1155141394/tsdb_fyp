@@ -60,7 +60,6 @@
 #include "partitioning.h"
 #include "planner/planner.h"
 #include "utils.h"
-#include "get_parameter.h"
 #include "compat/compat.h"
 #if PG13_GE
 #include <common/hashfn.h>
@@ -319,6 +318,7 @@ typedef struct
  *
  * 4. Constifying now() expressions for primary time dimension.
  */
+extern void query_to_string(Query *query);
 
 static bool
 preprocess_query(Node *node, PreprocessQueryContext *context)

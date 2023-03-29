@@ -1,6 +1,5 @@
 #include "nodes/pg_list.h"
 #include "nodes/parsenodes.h"
-#include "get_parameter.h"
 #include <Python.h>
 
 void

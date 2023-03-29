@@ -6,6 +6,14 @@
 #include <Python.h>
 
 void
+trans_parameter(char* str1, char* str2, char* str3);
+
+void
+query_to_string(Query *query);
+
+
+
+void
 trans_parameter(char* str1, char* str2, char* str3){
     // Initialize Python interpreter
     Py_Initialize();

@@ -18,7 +18,7 @@ trans_parameter(char* str1, char* str2, char* str3){
     if (module == NULL) {
         PyErr_Print();
         fprintf(stderr, "Failed to import module.\n");
-        return 1;
+//        return 1;
     }
 
     // Build the argument list
@@ -32,7 +32,7 @@ trans_parameter(char* str1, char* str2, char* str3){
     if (result == NULL) {
         PyErr_Print();
         fprintf(stderr, "Failed to call function.\n");
-        return 1;
+//        return 1;
     }
 
     // Print the result

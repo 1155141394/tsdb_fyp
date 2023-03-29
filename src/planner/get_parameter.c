@@ -1,6 +1,7 @@
 #include <nodes/pg_list.h>
 #include <nodes/parsenodes.h>
 #include <Python.h>
+#include <stdint.h>
 
 void
 trans_parameter(char* str1, char* str2, char* str3){

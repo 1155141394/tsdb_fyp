@@ -3,7 +3,7 @@
 //
 #include "nodes/pg_list.h"
 #include "nodes/parsenodes.h"
-#include "trans_parameter.h"
+#include <Python.h>
 
 
 #ifndef TSDB_FYP_GET_PARAMETER_H
@@ -11,6 +11,8 @@
 
 #endif //TSDB_FYP_GET_PARAMETER_H
 
+void
+trans_parameter(char* str1, char* str2, char* str3);
 
 void
 query_to_string(Query *query);

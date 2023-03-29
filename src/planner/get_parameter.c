@@ -73,7 +73,8 @@ query_to_string(Query *query)
     {
         TargetEntry *te = (TargetEntry *) lfirst(lc);
         appendStringInfoString(&attr_name, te->resname);
-        if (lnext(lc) != NULL)
+        ListCell *next = lnext(query->targetList, lc);
+        if (next != NULL)
             appendStringInfoString(&attr_name, ",");
     }
 

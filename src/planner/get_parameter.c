@@ -2,6 +2,7 @@
 #include <nodes/nodes.h>
 #include <nodes/pg_list.h>
 #include <nodes/parsenodes.h>
+#include <stringinfo.h>
 #include <Python.h>
 
 void
@@ -54,15 +55,15 @@ void
 query_to_string(Query *query)
 {
     // init attr_name
-    struct StringInfoData attr_name;
+    StringInfoData attr_name;
     initStringInfo(&attr_name);
 
     // init table_name
-    struct StringInfoData table_name;
+    StringInfoData table_name;
     initStringInfo(&table_name);
 
     // init where condition
-    struct StringInfoData where_part;
+    StringInfoData where_part;
     initStringInfo(&where_part);
 
 //    appendStringInfoString(&buf, "SELECT ");

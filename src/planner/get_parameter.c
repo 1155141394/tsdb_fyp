@@ -2,7 +2,7 @@
 #include <nodes/nodes.h>
 #include <nodes/pg_list.h>
 #include <nodes/parsenodes.h>
-#include <stringinfo.h>
+#include <lib/stringinfo.h>
 #include <Python.h>
 
 void

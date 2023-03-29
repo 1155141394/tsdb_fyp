@@ -73,7 +73,7 @@ query_to_string(Query *query)
     {
         TargetEntry *te = (TargetEntry *) lfirst(lc);
         appendStringInfoString(&attr_name, te->resname);
-        if (lc->next != NULL)
+        if (lnext(lc) != NULL)
             appendStringInfoString(&attr_name, ",");
     }
 

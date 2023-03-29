@@ -61,7 +61,6 @@
 #include "planner/planner.h"
 #include "utils.h"
 #include "get_parameter.h"
-#include "trans_parameter.h"
 #include "compat/compat.h"
 #if PG13_GE
 #include <common/hashfn.h>

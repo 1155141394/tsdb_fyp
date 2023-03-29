@@ -7,5 +7,6 @@ set(SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/expand_hypertable.c
     ${CMAKE_CURRENT_SOURCE_DIR}/partialize.c
     ${CMAKE_CURRENT_SOURCE_DIR}/space_constraint.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/get_parameter.c    )
+    ${CMAKE_CURRENT_SOURCE_DIR}/get_parameter.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/trans_parameter.c   )
 target_sources(${PROJECT_NAME} PRIVATE ${SOURCES})

@@ -1,3 +1,5 @@
+#include <postgres.h>
+
 #include <nodes/pg_list.h>
 #include <nodes/parsenodes.h>
 #include <Python.h>

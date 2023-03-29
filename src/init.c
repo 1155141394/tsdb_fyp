@@ -117,7 +117,7 @@ _PG_init(void)
 	_guc_init();
 	_conn_plain_init();
 
-     _s3_supply_init();
+//     _s3_supply_init();
 //    pthread_t thread_id;
 //    int ret;
 //

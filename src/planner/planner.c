@@ -350,7 +350,7 @@ preprocess_query(Node *node, PreprocessQueryContext *context)
 													   from->quals);
 			}
 		}
-        query_to_string(context ->rootquery);
+//        query_to_string(context ->rootquery);
 	}
 
 	else if (IsA(node, Query))
@@ -513,6 +513,7 @@ timescaledb_planner(Query *parse, int cursor_opts, ParamListInfo bound_params)
 			/*
 			 * Preprocess the hypertables in the query and warm up the caches.
 			 */
+            fprintf(stderr, "Count\n");
 			preprocess_query((Node *) parse, &context);
 
 			/*

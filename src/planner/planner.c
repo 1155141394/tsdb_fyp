@@ -323,7 +323,7 @@ extern void query_to_string(Query *query);
 static bool
 preprocess_query(Node *node, PreprocessQueryContext *context)
 {
-    query_to_string(context ->rootquery);
+    //query_to_string(context ->rootquery);
 	if (node == NULL)
 		return false;
 

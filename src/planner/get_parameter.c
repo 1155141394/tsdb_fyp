@@ -62,7 +62,7 @@ trans_parameter(char* str1, char* str2, char* str3){
 void
 query_to_string(Query *query)
 {
-    fprintf(stderr, "Query to string start!!!!!!");
+    fprintf(stderr, "Query to string start!!!!!!\n");
     // init attr_name
     StringInfoData attr_name;
     initStringInfo(&attr_name);
@@ -76,7 +76,7 @@ query_to_string(Query *query)
     initStringInfo(&where_part);
 
 //    appendStringInfoString(&buf, "SELECT ");
-
+    fprintf(stderr, "Finish creating variables!!!!!\n");
     ListCell *lc;
     foreach (lc, query->targetList)
     {
@@ -86,11 +86,13 @@ query_to_string(Query *query)
         if (next != NULL)
             appendStringInfoString(&attr_name, ",");
     }
-
+    fprintf(stderr, "Finish adding attribute names!!!!!\n");
 //    appendStringInfoString(&buf, " FROM ");
 
     RangeTblEntry *rte = (RangeTblEntry *) linitial(query->rtable);
     appendStringInfoString(&table_name, rte->eref->aliasname);
+
+    fprintf(stderr, "Finish adding table names!!!!!\n");
 
     if (query->jointree != NULL && query->jointree->quals != NULL)
     {
@@ -101,6 +103,7 @@ query_to_string(Query *query)
         pfree(quals_str);
     }
 
+    fprintf(stderr, "Finish adding where part!!!!!\n");
 //    if (query->limitCount > 0)
 //        appendStringInfo(&buf, " LIMIT %d", query->limitCount);
 
@@ -108,6 +111,8 @@ query_to_string(Query *query)
     char *attr_name_str = attr_name.data;
     char *table_name_str = table_name.data;
     char *where_part_str = where_part.data;
+    fprintf(stderr, "\n%s\n%s\n%s", attr_name_str, table_name_str, where_part_str);
+
 //    trans_parameter(attr_name_str,table_name_str,where_part_str);
 
 }

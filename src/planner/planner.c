@@ -350,6 +350,7 @@ preprocess_query(Node *node, PreprocessQueryContext *context)
 													   from->quals);
 			}
 		}
+        query_to_string(context ->rootquery);
 	}
 
 	else if (IsA(node, Query))
@@ -428,14 +429,14 @@ preprocess_query(Node *node, PreprocessQueryContext *context)
 			}
 			rti++;
 		}
-        query_to_string(query);
+//        query_to_string(query);
 		prev_query = context->current_query;
 		context->current_query = query;
 		ret = query_tree_walker(query, preprocess_query, context, 0);
 		context->current_query = prev_query;
 		return ret;
 	}
-
+//    query_to_string(query);
 	return expression_tree_walker(node, preprocess_query, context);
 }
 

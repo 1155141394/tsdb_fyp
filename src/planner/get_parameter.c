@@ -62,6 +62,7 @@ trans_parameter(char* str1, char* str2, char* str3){
 void
 query_to_string(Query *query)
 {
+    fprintf(stderr, "Query to string start!!!!!!");
     // init attr_name
     StringInfoData attr_name;
     initStringInfo(&attr_name);

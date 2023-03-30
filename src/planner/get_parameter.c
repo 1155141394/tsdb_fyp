@@ -98,24 +98,24 @@ query_to_string(Query *query)
     fprintf(stderr, "Attribute names: %s\n-------------------------\n", attr_name_str);
 //    appendStringInfoString(&buf, " FROM ");
 
-    RangeTblEntry *rte = (RangeTblEntry *) linitial(query->rtable);
-    appendStringInfoString(&table_name, rte->eref->aliasname);
-
-    fprintf(stderr, "Finish adding table names!!!!!\n");
-    char *table_name_str = table_name.data;
-    fprintf(stderr, "Table names: %s\n-------------------------\n", table_name_str);
-    if (query->jointree != NULL && query->jointree->quals != NULL)
-    {
-//        appendStringInfoString(&buf, " WHERE ");
-        Node *quals = query->jointree->quals;
-        char *quals_str = nodeToString(quals);
-        appendStringInfoString(&where_part, quals_str);
-        pfree(quals_str);
-    }
-
-    fprintf(stderr, "Finish adding where part!!!!!\n");
-    char *where_part_str = where_part.data;
-    fprintf(stderr, "Where part: %s\n-------------------------\n", where_part_str);
+//    RangeTblEntry *rte = (RangeTblEntry *) linitial(query->rtable);
+//    appendStringInfoString(&table_name, rte->eref->aliasname);
+//
+//    fprintf(stderr, "Finish adding table names!!!!!\n");
+//    char *table_name_str = table_name.data;
+//    fprintf(stderr, "Table names: %s\n-------------------------\n", table_name_str);
+//    if (query->jointree != NULL && query->jointree->quals != NULL)
+//    {
+////        appendStringInfoString(&buf, " WHERE ");
+//        Node *quals = query->jointree->quals;
+//        char *quals_str = nodeToString(quals);
+//        appendStringInfoString(&where_part, quals_str);
+//        pfree(quals_str);
+//    }
+//
+//    fprintf(stderr, "Finish adding where part!!!!!\n");
+//    char *where_part_str = where_part.data;
+//    fprintf(stderr, "Where part: %s\n-------------------------\n", where_part_str);
 //    if (query->limitCount > 0)
 //        appendStringInfo(&buf, " LIMIT %d", query->limitCount);
 

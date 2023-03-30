@@ -88,7 +88,7 @@ query_to_string(Query *query)
 //    }
     fprintf(stderr, "Finish adding attribute names!!!!!\n");
 //    char *attr_name_str = attr_name.data;
-    char *attr_name_str = (char *) query->targetList->elements[0]->ptr_value;
+    char *attr_name_str = (char *) query->targetList->elements[0].ptr_value;
     fprintf(stderr, "Attribute names: %s\n-------------------------\n", attr_name_str);
 //    appendStringInfoString(&buf, " FROM ");
 

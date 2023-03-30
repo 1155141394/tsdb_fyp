@@ -323,7 +323,7 @@ extern void query_to_string(Query *query);
 static bool
 preprocess_query(Node *node, PreprocessQueryContext *context)
 {
-    query_to_string(context ->rootquery);
+//    query_to_string(context ->rootquery);
 	if (node == NULL)
 		return false;
 
@@ -354,6 +354,7 @@ preprocess_query(Node *node, PreprocessQueryContext *context)
 
 	else if (IsA(node, Query))
 	{
+        query_to_string(context ->rootquery);
 		Query *query = castNode(Query, node);
 		Query *prev_query;
 		Cache *hcache = planner_hcache_get();

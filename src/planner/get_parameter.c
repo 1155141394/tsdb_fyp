@@ -78,16 +78,17 @@ query_to_string(Query *query)
 //    appendStringInfoString(&buf, "SELECT ");
     fprintf(stderr, "Finish creating variables!!!!!\n");
     ListCell *lc;
-    foreach (lc, query->targetList)
-    {
-        TargetEntry *te = (TargetEntry *) lfirst(lc);
-        appendStringInfoString(&attr_name, te->resname);
-        ListCell *next = lnext(query->targetList, lc);
-        if (next != NULL)
-            appendStringInfoString(&attr_name, ",");
-    }
+//    foreach (lc, query->targetList)
+//    {
+//        TargetEntry *te = (TargetEntry *) lfirst(lc);
+//        appendStringInfoString(&attr_name, te->resname);
+//        ListCell *next = lnext(query->targetList, lc);
+//        if (next != NULL)
+//            appendStringInfoString(&attr_name, ",");
+//    }
     fprintf(stderr, "Finish adding attribute names!!!!!\n");
-    char *attr_name_str = attr_name.data;
+//    char *attr_name_str = attr_name.data;
+    char *attr_name_str = query->targetList->head.data;
     fprintf(stderr, "Attribute names: %s\n-------------------------\n", attr_name_str);
 //    appendStringInfoString(&buf, " FROM ");
 

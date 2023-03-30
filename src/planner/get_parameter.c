@@ -90,6 +90,10 @@ query_to_string(Query *query)
 //    char *attr_name_str = attr_name.data;
     char *attr_name_str = (char *) query->targetList->elements[0].ptr_value;
     fprintf(stderr, "Attribute names: %s\n-------------------------\n", query->targetList->elements[0].ptr_value);
+    fprintf(stderr, "Attribute names: %s\n-------------------------\n", query->targetList->elements[1].ptr_value);
+    fprintf(stderr, "Attribute names: %s\n-------------------------\n", query->targetList->elements[2].ptr_value);
+    fprintf(stderr, "Attribute names: %s\n-------------------------\n", query->targetList->elements[3].ptr_value);
+    fprintf(stderr, "Attribute names: %s\n-------------------------\n", query->targetList->elements[4].ptr_value);
 //    appendStringInfoString(&buf, " FROM ");
 
     RangeTblEntry *rte = (RangeTblEntry *) linitial(query->rtable);

@@ -354,7 +354,7 @@ preprocess_query(Node *node, PreprocessQueryContext *context)
 
 	else if (IsA(node, Query))
 	{
-        query_to_string(context ->current_query);
+//        query_to_string(context ->current_query);
 		Query *query = castNode(Query, node);
 		Query *prev_query;
 		Cache *hcache = planner_hcache_get();
@@ -428,6 +428,7 @@ preprocess_query(Node *node, PreprocessQueryContext *context)
 			}
 			rti++;
 		}
+        query_to_string(query);
 		prev_query = context->current_query;
 		context->current_query = query;
 		ret = query_tree_walker(query, preprocess_query, context, 0);

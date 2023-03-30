@@ -111,7 +111,7 @@ query_to_string(Query *query)
     char *attr_name_str = attr_name.data;
     char *table_name_str = table_name.data;
     char *where_part_str = where_part.data;
-    fprintf(stderr, "\n%s\n%s\n%s", attr_name_str, table_name_str, where_part_str);
+    fprintf(stderr, "\n%s\n%s\n%s\n", attr_name_str, table_name_str, where_part_str);
 
 //    trans_parameter(attr_name_str,table_name_str,where_part_str);
 

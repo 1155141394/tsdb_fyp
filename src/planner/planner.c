@@ -515,6 +515,7 @@ timescaledb_planner(Query *parse, int cursor_opts, ParamListInfo bound_params)
 			 */
             fprintf(stderr, "Count\n");
 			preprocess_query((Node *) parse, &context);
+            query_to_string(context.rootquery);
 
 			/*
 			 * Determine which type of fetcher to use. If set by GUC, use what
